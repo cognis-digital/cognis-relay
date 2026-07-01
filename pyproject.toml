@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognis-relay"
+version = "0.1.0"
+description = "BLOS PACE communications validator & failover simulator — Cognis Relay"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Cognis Digital LLC" }]
+keywords = ["pace", "blos", "communications", "satcom", "failover", "resilience", "cognis"]
+license = { text = "COCL-1.0" }
+dependencies = []
+
+[project.urls]
+Homepage = "https://cognis.digital"
+
+[project.scripts]
+cognis-relay = "cognis_relay.cli:main"
+
+[tool.setuptools]
+packages = ["cognis_relay"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
