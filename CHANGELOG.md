@@ -2,6 +2,14 @@
 
 Adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] — 2026-07-03
+
+### Added
+- **RF link-budget model** (`linkbudget.py`): free-space path loss + received-power
+  margin to check whether each PACE pathway closes at range, plus an ATAK/WINTAK
+  interoperability check (throughput sufficient for CoT PLI). CLI `linkbudget`.
+  First-order model — documented as such.
+
 ## [0.1.0] — 2026-07-01
 
 Initial public release.

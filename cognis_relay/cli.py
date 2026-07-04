@@ -33,6 +33,25 @@ def cmd_validate(args):
     return 0
 
 
+def cmd_linkbudget(args):
+    from . import synth
+    from .linkbudget import assess_pathway, atak_summary
+    plan = synth.sample_plan()
+    # illustrative geometry: dismounted team to a BLOS relay ~2000 km
+    geom = {"tx_dbm": 43.0, "tx_gain_dbi": 3.0, "rx_gain_dbi": 30.0,
+            "freq_mhz": args.freq, "dist_km": args.dist, "rx_sens_dbm": -110.0}
+    print(f"COGNIS RELAY | link-budget @ {args.dist} km, {args.freq} MHz")
+    for p in plan:
+        a = assess_pathway(p, geom)
+        lb = a["link_budget"]
+        print(f"  {p.tier} {p.name:26} margin {lb['margin_db']:+.1f} dB "
+              f"{'CLOSES' if lb['closes'] else 'FAILS '}  ATAK:{'yes' if a['atak_capable'] else 'no'}")
+    s = atak_summary(plan)
+    print(f"ATAK/WINTAK PLI capable tiers: {','.join(s['capable_tiers'])} "
+          f"(need >= {s['atak_min_kbps']} kbps)")
+    return 0
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="cognis-relay",
                                 description="Cognis Relay — BLOS PACE validator & failover simulator")
@@ -46,6 +65,11 @@ def build_parser():
     v.add_argument("--plan", required=True)
     v.add_argument("--json", action="store_true")
     v.set_defaults(func=cmd_validate)
+
+    lb = sub.add_parser("linkbudget", help="RF link-budget + ATAK interop for the sample plan")
+    lb.add_argument("--dist", type=float, default=2000.0, help="range (km)")
+    lb.add_argument("--freq", type=float, default=1500.0, help="frequency (MHz)")
+    lb.set_defaults(func=cmd_linkbudget)
     return p
 
 
