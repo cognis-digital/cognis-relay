@@ -1,4 +1,4 @@
-<h1 align="center">🟣 Cognis Relay</h1>
+<h1 align="center">🟣 Hoplink</h1>
 <p align="center"><b>BLOS PACE communications validator &amp; failover simulator</b><br>
 <i>Validate Primary/Alternate/Contingency/Emergency plans and simulate automated failover — self-hosted, offline.</i></p>
 
@@ -24,10 +24,10 @@
 ## Quick start
 
 ```bash
-git clone https://github.com/cognis-digital/cognis-relay
-cd cognis-relay
-python -m cognis_relay demo
-python -m cognis_relay validate --plan my_pace.json --json
+git clone https://github.com/cognis-digital/hoplink
+cd hoplink
+python -m hoplink demo
+python -m hoplink validate --plan my_pace.json --json
 ```
 
 ## Verification & proof

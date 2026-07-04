@@ -1,1 +1,1 @@
-"""Verification harness for Cognis Relay."""
+"""Verification harness for Hoplink."""

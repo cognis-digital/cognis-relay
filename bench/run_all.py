@@ -17,7 +17,7 @@ ROOT = os.path.dirname(HERE)
 
 def render_md(a, env) -> str:
     L = []
-    L.append("# Cognis Relay — Verification Results\n")
+    L.append("# Hoplink — Verification Results\n")
     L.append("Reproduce with: `python bench/run_all.py`.\n")
     L.append(f"Environment: {env['implementation']} {env['python']} on {env['system']}/{env['machine']}.\n")
     L.append("| Metric | Value |")

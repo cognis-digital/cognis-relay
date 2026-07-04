@@ -3,9 +3,9 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cognis-relay"
+name = "hoplink"
 version = "0.2.0"
-description = "BLOS PACE communications validator & failover simulator — Cognis Relay"
+description = "BLOS PACE communications validator & failover simulator — Hoplink"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Cognis Digital LLC" }]
@@ -17,10 +17,10 @@ dependencies = []
 Homepage = "https://cognis.digital"
 
 [project.scripts]
-cognis-relay = "cognis_relay.cli:main"
+hoplink = "hoplink.cli:main"
 
 [tool.setuptools]
-packages = ["cognis_relay"]
+packages = ["hoplink"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

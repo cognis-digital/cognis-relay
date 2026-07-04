@@ -1,6 +1,6 @@
 # Limitations & Responsible Use
 
-- **Planning/assessment tool, not a radio.** Cognis Relay validates PACE plan
+- **Planning/assessment tool, not a radio.** Hoplink validates PACE plan
   *structure* and simulates failover logic; it does not transmit, and it does not
   compute RF link budgets from first principles.
 - **LPI/LPD posture is an operator-supplied score**, not a measured emission

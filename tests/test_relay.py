@@ -1,7 +1,7 @@
 from bench import evaluate
-from cognis_relay import synth
-from cognis_relay.failover import simulate
-from cognis_relay.pace import validate
+from hoplink import synth
+from hoplink.failover import simulate
+from hoplink.pace import validate
 
 
 def test_valid_plan_passes():

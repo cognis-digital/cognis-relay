@@ -1,6 +1,6 @@
 # SOLIC Challenge Area 7 — Capability Mapping
 
-| Desired capability | Cognis Relay | Module |
+| Desired capability | Hoplink | Module |
 |---|---|---|
 | Four distinct pathways (P/A/C/E) | Tier-presence validation | `pace` |
 | Modality diversity across physical domains | Domain-diversity check (fails 100% single domain) | `pace` |

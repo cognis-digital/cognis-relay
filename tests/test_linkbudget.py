@@ -1,5 +1,5 @@
-from cognis_relay import synth
-from cognis_relay.linkbudget import assess_pathway, atak_summary, fspl_db, link_margin
+from hoplink import synth
+from hoplink.linkbudget import assess_pathway, atak_summary, fspl_db, link_margin
 
 
 def test_fspl_increases_with_distance_and_freq():
