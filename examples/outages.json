@@ -1,0 +1,19 @@
+[
+  [],
+  [
+    "meo-satcom"
+  ],
+  [
+    "geo-satcom",
+    "meo-satcom"
+  ],
+  [
+    "geo-satcom",
+    "hf",
+    "meo-satcom"
+  ],
+  [
+    "meo-satcom"
+  ],
+  []
+]

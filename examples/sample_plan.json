@@ -1,0 +1,42 @@
+[
+  {
+    "tier": "P",
+    "name": "MEO-SATCOM terminal",
+    "modality": "MEO-SATCOM",
+    "domain": "meo-satcom",
+    "bandwidth_kbps": 2048,
+    "lpi": 0.6,
+    "is_pleo": false,
+    "man_portable": true
+  },
+  {
+    "tier": "A",
+    "name": "GEO TSAT",
+    "modality": "GEO-SATCOM",
+    "domain": "geo-satcom",
+    "bandwidth_kbps": 1024,
+    "lpi": 0.5,
+    "is_pleo": false,
+    "man_portable": true
+  },
+  {
+    "tier": "C",
+    "name": "HF-ALE",
+    "modality": "HF-ALE",
+    "domain": "hf",
+    "bandwidth_kbps": 9.6,
+    "lpi": 0.7,
+    "is_pleo": false,
+    "man_portable": true
+  },
+  {
+    "tier": "E",
+    "name": "PLB distress beacon",
+    "modality": "PLB-SATCOM",
+    "domain": "terrestrial",
+    "bandwidth_kbps": 0.05,
+    "lpi": 0.8,
+    "is_pleo": false,
+    "man_portable": true
+  }
+]

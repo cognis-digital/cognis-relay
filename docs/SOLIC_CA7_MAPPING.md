@@ -5,6 +5,8 @@
 | Four distinct pathways (P/A/C/E) | Tier-presence validation | `pace` |
 | Modality diversity across physical domains | Domain-diversity check (fails 100% single domain) | `pace` |
 | Automated failover where possible | Priority failover simulation over outage timeline | `failover` |
+| Survivability under denied domain | Single-point-of-failure analysis + plan grade | `analysis` |
+| Recovery timeliness | Failover MTTR / longest-blackout metrics | `analysis` |
 | LPI/LPD/LPE consideration | LPI posture in resilience score | `pace` |
 | pLEO disqualified | Hard disqualification rule | `pace` |
 | Man-portable / SWaP-C envelope | Pathway `man_portable` + SWaP-C metadata | `model` |

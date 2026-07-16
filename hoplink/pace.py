@@ -9,11 +9,18 @@ LPI/LPD posture and man-portability are scored.
 
 from __future__ import annotations
 
+from typing import Dict, List
+
 from .model import TIERS
 
 
-def validate(pathways: list) -> dict:
-    violations = []
+def validate(pathways: list) -> Dict[str, object]:
+    """Validate a PACE plan and score its resilience.
+
+    Returns a dict with ``valid`` (bool), ``violations`` (list of strings),
+    ``tiers_present``, ``domains``, and ``resilience_score`` (``0..1``).
+    """
+    violations: List[str] = []
     tiers = {p.tier for p in pathways}
     for t in TIERS:
         if t not in tiers:
@@ -34,6 +41,11 @@ def validate(pathways: list) -> dict:
 
 
 def _score(pathways: list, violations: list) -> float:
+    """Compute a bounded ``0..1`` resilience score for a plan.
+
+    Rewards tier completeness and physical-domain diversity and average LPI
+    posture; penalizes each validation violation.
+    """
     if not pathways:
         return 0.0
     s = 0.25 * len({p.tier for p in pathways})          # up to 1.0 for full PACE
