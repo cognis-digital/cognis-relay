@@ -7,12 +7,15 @@ tier (P>A>C>E) whose modality and domain are not degraded.
 
 from __future__ import annotations
 
+from typing import Iterable, List, Optional
+
+#: PACE priority order — lower is higher priority.
 ORDER = {"P": 0, "A": 1, "C": 2, "E": 3}
 
 
-def simulate(pathways: list, outages: list) -> dict:
+def simulate(pathways: list, outages: Iterable) -> dict:
     ordered = sorted(pathways, key=lambda p: ORDER.get(p.tier, 9))
-    sequence = []
+    sequence: List[Optional[str]] = []
     for down in outages:
         down = set(down)
         active = None

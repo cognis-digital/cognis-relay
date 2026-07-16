@@ -8,5 +8,5 @@ domain; no pLEO), then simulates automated failover through link outages.
 (c) 2026 Cognis Digital LLC (Wyoming, USA). Source-available under COCL-1.0.
 """
 
-__version__ = "0.2.0"
-__all__ = ["model", "pace", "failover", "linkbudget", "report", "synth"]
+__version__ = "0.3.0"
+__all__ = ["model", "pace", "failover", "linkbudget", "report", "synth", "analysis"]
